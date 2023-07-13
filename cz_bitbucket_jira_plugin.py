@@ -6,7 +6,7 @@ from commitizen.defaults import Questions
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
-        self.cfg_issue_prefix = self.config.settings.get('jira_project_issue_prefix')
+        self.cfg_project_prefix = self.config.settings.get('jira_project_issue_prefix')
         self.config.update(
             {
                 "style": [
@@ -28,8 +28,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
 
     def questions(self) -> Questions:
-        if self.cfg_issue_prefix:
-            instruction_issue_prefix = f"[{self.cfg_issue_prefix}]:"
+        if self.cfg_project_prefix:
+            instruction_issue_prefix = f"[{self.cfg_project_prefix}]:"
         else:
             instruction_issue_prefix = '\n '
 
@@ -84,7 +84,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
 
     def message(self, answers: dict) -> str:
-        issue_prefix = str(answers.get('issue_prefix') or self.cfg_issue_prefix or '')
+        issue_prefix = str(answers.get('issue_prefix') or self.cfg_project_prefix or '')
         if issue_prefix:
             issue_prefix += '-'
 
