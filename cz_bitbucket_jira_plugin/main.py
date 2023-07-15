@@ -1,6 +1,7 @@
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
+from .validators import required_answer_validator
 
 
 class CzBitbucketJiraPlugin(BaseCommitizen):
@@ -54,6 +55,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 "type": "input",
                 "name": "issue_number",
                 "message": "Issue number:\n ",
+                "validate": required_answer_validator(answer_title='Issue number'),
                 "qmark": "\n*"
             },
             {
@@ -74,6 +76,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 "type": "input",
                 "name": "issue_title",
                 "message": "Issue title:\n ",
+                "validate": required_answer_validator(answer_title='Issue title'),
                 "qmark": "\n*"
             },
             {
