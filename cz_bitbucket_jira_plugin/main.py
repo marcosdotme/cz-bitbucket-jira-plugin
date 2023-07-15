@@ -33,6 +33,9 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         else:
             instruction_issue_prefix = '\n '
 
+        instruction_multiple_items = "(if more than one use comma ',' to separate them) [press enter to skip]\n "
+        instruction_multiline = '(Aperte [enter] para inserir uma nova linha ou [alt + enter] para terminar)\n>'
+
         questions = [
             {
                 "type": "input",
@@ -56,13 +59,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             {
                 "type": "input",
                 "name": "issue_subtask",
-                "message": "Issue subtask number (if more than one use comma ',' to separate them) [press enter to skip]:\n ",
+                "message": "Issue subtask number:\n",
+                "instruction": instruction_multiple_items,
                 "qmark": "\n "
             },
             {
                 "type": "input",
                 "name": "issue_related_task",
-                "message": "Issue related task number (if more than one use comma ',' to separate them) [press enter to skip]:\n ",
+                "message": "Issue related task number:\n",
+                "instruction": instruction_multiple_items,
                 "qmark": "\n "
             },
             {
@@ -74,7 +79,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             {
                 "type": "input",
                 "multiline": True,
-                "instruction": "(Aperte [enter] para inserir uma nova linha ou [alt + enter] para terminar)\n>",
+                "instruction": instruction_multiline,
                 "name": "issue_description",
                 "message": "Issue description:\n",
                 "qmark": "\n "
