@@ -55,7 +55,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 "type": "input",
                 "name": "issue_number",
                 "message": "Issue number:\n ",
-                "validate": required_answer_validator(answer_title='Issue number'),
+                "validate": required_answer_validator,
                 "qmark": "\n*"
             },
             {
@@ -76,7 +76,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 "type": "input",
                 "name": "issue_title",
                 "message": "Issue title:\n ",
-                "validate": required_answer_validator(answer_title='Issue title'),
+                "validate": required_answer_validator,
                 "qmark": "\n*"
             },
             {
