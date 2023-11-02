@@ -35,7 +35,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             instruction_issue_prefix = '\n '
 
         instruction_multiple_items = "(if more than one use comma ',' to separate them) [press enter to skip]\n "
-        instruction_multiline = '(Aperte [enter] para inserir uma nova linha ou [alt + enter] para terminar)\n>'
+        instruction_multiline = '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
 
         questions = [
             {
