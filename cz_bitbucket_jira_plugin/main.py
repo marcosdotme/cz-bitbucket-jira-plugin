@@ -29,15 +29,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
     def questions(self) -> Questions:
         if self.cfg_project_prefix:
-            instruction_issue_prefix = f"[{self.cfg_project_prefix}]:"
+            default_prefix = f"[{self.cfg_project_prefix}]:"
         else:
-            instruction_issue_prefix = '\n '
+            default_prefix = '\n '
 
-        instruction_multiple_items = (
+        multiple_items_instruction = (
             f"(if more than one, use comma to separate them)"
             f" [press enter to skip]\n "
         )
-        instruction_multiline = (
+        multiline_instruction = (
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
         )
 
@@ -46,7 +46,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'name': 'issue_prefix',
                 'message': "What's the jira prefix?",
-                'instruction': instruction_issue_prefix,
+                'instruction': default_prefix,
                 'qmark': ' '
             },
             {
@@ -66,14 +66,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'name': 'issue_subtask',
                 'message': 'Issue subtask number:\n',
-                'instruction': instruction_multiple_items,
+                'instruction': multiple_items_instruction,
                 'qmark': '\n '
             },
             {
                 'type': 'input',
                 'name': 'issue_related_task',
                 'message': 'Issue related task number:\n',
-                'instruction': instruction_multiple_items,
+                'instruction': multiple_items_instruction,
                 'qmark': '\n '
             },
             {
@@ -86,7 +86,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             {
                 'type': 'input',
                 'multiline': True,
-                'instruction': instruction_multiline,
+                'instruction': multiline_instruction,
                 'name': 'issue_description',
                 'message': 'Issue description:\n',
                 'qmark': '\n '
@@ -96,6 +96,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
     def message(self, answers: dict) -> str:
         issue_prefix = str(answers.get('issue_prefix') or self.cfg_project_prefix or '')
+
         if issue_prefix:
             issue_prefix += '-'
 
@@ -106,21 +107,21 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         issue_subtask = answers.get('issue_subtask')
         issue_related_task = answers.get('issue_related_task')
 
-        message = f"{issue_title} [#{issue_prefix}{issue_number}]"
+        commit_message = f"{issue_title} [#{issue_prefix}{issue_number}]"
 
         if issue_description:
-            message += f"\n\n{issue_description}"
+            commit_message += f"\n\n{issue_description}"
 
         if issue_epic_number:
-            message += f"\n\nissue epic: [#{issue_prefix}{issue_epic_number}]"
+            commit_message += f"\n\nissue epic: [#{issue_prefix}{issue_epic_number}]"
         
         if issue_subtask:
-            message += f"\nissue subtask: [#{issue_prefix}{issue_subtask}]"
+            commit_message += f"\nissue subtask: [#{issue_prefix}{issue_subtask}]"
         
         if issue_related_task:
-            message += f"\nissue related task: [#{issue_prefix}{issue_related_task}]"
+            commit_message += f"\nissue related task: [#{issue_prefix}{issue_related_task}]"
 
-        return message
+        return commit_message
 
     def example(self) -> str:
         """Provide an example to help understand the style (OPTIONAL)
