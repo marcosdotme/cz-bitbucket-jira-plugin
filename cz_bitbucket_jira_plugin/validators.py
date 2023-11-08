@@ -11,6 +11,18 @@ def required_answer_validator(answer):
     return True
 
 
+def must_be_integer_validator(answer):
+    if not answer:
+        return True
+
+    try:
+        int(answer)
+    except ValueError:
+        return 'Value must be integer.'
+
+    return True
+
+
 def apply_multiple_validators(validators: List[Callable]):
     def apply_validators(answer):
         for validator in validators:
