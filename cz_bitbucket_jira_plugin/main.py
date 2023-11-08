@@ -7,7 +7,7 @@ from .validators import required_answer_validator
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
-        self.cfg_project_prefix = self.config.settings.get('jira_project_issue_prefix')
+        self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
         self.config.update(
             {
                 'style': [
@@ -28,8 +28,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         super().__init__(self.config)
 
     def questions(self) -> Questions:
-        if self.cfg_project_prefix:
-            default_prefix = f"[{self.cfg_project_prefix}]:"
+        if self.project_prefix:
+            default_prefix = f"[{self.project_prefix}]:"
         else:
             default_prefix = '\n '
 
@@ -95,7 +95,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         return questions
 
     def message(self, answers: dict) -> str:
-        issue_prefix = str(answers.get('issue_prefix') or self.cfg_project_prefix or '')
+        issue_prefix = str(answers.get('issue_prefix') or self.project_prefix or '')
 
         if issue_prefix:
             issue_prefix += '-'
