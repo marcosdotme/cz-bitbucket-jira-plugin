@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from typing import Callable
 from typing import List
 
@@ -19,6 +20,17 @@ def must_be_integer_validator(answer):
         int(answer)
     except ValueError:
         return 'Value must be integer.'
+
+    return True
+
+
+def all_values_must_be_integer_validator(answer):
+    # Anything that is not a number, comma or whitespace character
+    invalid_chars_pattern = re.compile("[^0-9,\s]+")
+    invalid_chars = invalid_chars_pattern.findall(answer)
+
+    if invalid_chars:
+        return 'All values must be integer.'
 
     return True
 
