@@ -10,23 +10,22 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         self.cfg_project_prefix = self.config.settings.get('jira_project_issue_prefix')
         self.config.update(
             {
-                "style": [
-                    ("qmark", "fg:#ff5555"),
-                    ("question", "fg:#bd93f9"),
-                    ("answer", "fg:#f8f8f2 nobold"),
-                    ("pointer", "fg:#ff9d00"),
-                    ("highlighted", "fg:#ff9d00"),
-                    ("selected", "fg:#cc5454"),
-                    ("separator", "fg:#cc5454"),
-                    ("instruction", "fg:#858585 nobold"),
-                    ("text", "fg:#ffffff"),
-                    ("disabled", "fg:#858585 italic"),
+                'style': [
+                    ('qmark', 'fg:#ff5555'),
+                    ('question', 'fg:#bd93f9'),
+                    ('answer', 'fg:#f8f8f2 nobold'),
+                    ('pointer', 'fg:#ff9d00'),
+                    ('highlighted', 'fg:#ff9d00'),
+                    ('selected', 'fg:#cc5454'),
+                    ('separator', 'fg:#cc5454'),
+                    ('instruction', 'fg:#858585 nobold'),
+                    ('text', 'fg:#ffffff'),
+                    ('disabled', 'fg:#858585 italic'),
                 ]
             }
         )
 
         super().__init__(self.config)
-
 
     def questions(self) -> Questions:
         if self.cfg_project_prefix:
@@ -34,62 +33,66 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         else:
             instruction_issue_prefix = '\n '
 
-        instruction_multiple_items = "(if more than one use comma ',' to separate them) [press enter to skip]\n "
-        instruction_multiline = '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
+        instruction_multiple_items = (
+            f"(if more than one, use comma to separate them)"
+            f" [press enter to skip]\n "
+        )
+        instruction_multiline = (
+            '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
+        )
 
         questions = [
             {
-                "type": "input",
-                "name": "issue_prefix",
-                "message": f"What's the jira prefix?",
-                "instruction": instruction_issue_prefix,
-                "qmark": " "
+                'type': 'input',
+                'name': 'issue_prefix',
+                'message': "What's the jira prefix?",
+                'instruction': instruction_issue_prefix,
+                'qmark': ' '
             },
             {
-                "type": "input",
-                "name": "issue_epic_number",
-                "message": "Issue epic number:\n ",
-                "qmark": "\n "
+                'type': 'input',
+                'name': 'issue_epic_number',
+                'message': 'Issue epic number:\n ',
+                'qmark': '\n '
             },
             {
-                "type": "input",
-                "name": "issue_number",
-                "message": "Issue number:\n ",
-                "validate": required_answer_validator,
-                "qmark": "\n*"
+                'type': 'input',
+                'name': 'issue_number',
+                'message': 'Issue number:\n ',
+                'validate': required_answer_validator,
+                'qmark': '\n*'
             },
             {
-                "type": "input",
-                "name": "issue_subtask",
-                "message": "Issue subtask number:\n",
-                "instruction": instruction_multiple_items,
-                "qmark": "\n "
+                'type': 'input',
+                'name': 'issue_subtask',
+                'message': 'Issue subtask number:\n',
+                'instruction': instruction_multiple_items,
+                'qmark': '\n '
             },
             {
-                "type": "input",
-                "name": "issue_related_task",
-                "message": "Issue related task number:\n",
-                "instruction": instruction_multiple_items,
-                "qmark": "\n "
+                'type': 'input',
+                'name': 'issue_related_task',
+                'message': 'Issue related task number:\n',
+                'instruction': instruction_multiple_items,
+                'qmark': '\n '
             },
             {
-                "type": "input",
-                "name": "issue_title",
-                "message": "Issue title:\n ",
-                "validate": required_answer_validator,
-                "qmark": "\n*"
+                'type': 'input',
+                'name': 'issue_title',
+                'message': 'Issue title:\n ',
+                'validate': required_answer_validator,
+                'qmark': '\n*'
             },
             {
-                "type": "input",
-                "multiline": True,
-                "instruction": instruction_multiline,
-                "name": "issue_description",
-                "message": "Issue description:\n",
-                "qmark": "\n "
+                'type': 'input',
+                'multiline': True,
+                'instruction': instruction_multiline,
+                'name': 'issue_description',
+                'message': 'Issue description:\n',
+                'qmark': '\n '
             }
         ]
         return questions
-
 
     def message(self, answers: dict) -> str:
         issue_prefix = str(answers.get('issue_prefix') or self.cfg_project_prefix or '')
@@ -119,26 +122,23 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         return message
 
-
     def example(self) -> str:
         """Provide an example to help understand the style (OPTIONAL)
 
         Used by `cz example`.
         """
-        return "Problem with user (#321)"
-
+        return 'Problem with user (#321)'
 
     def schema(self) -> str:
         """Show the schema used (OPTIONAL)
 
         Used by `cz schema`.
         """
-        return "<title> (<issue>)"
-
+        return '<title> (<issue>)'
 
     def info(self) -> str:
         """Explanation of the commit rules. (OPTIONAL)
 
         Used by `cz info`.
         """
-        return "We use this because is useful"
+        return 'We use this because is useful'
