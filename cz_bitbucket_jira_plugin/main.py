@@ -116,8 +116,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         issue_number = answers.get('issue_number')
         issue_description = answers.get('issue_description')
         issue_epic_number = answers.get('issue_epic_number')
-        issue_subtask = answers.get('issue_subtask')
-        issue_related_task = answers.get('issue_related_task')
+        issue_subtasks = answers.get('issue_subtask')
+        issue_related_tasks = answers.get('issue_related_task')
 
         commit_message = f"{issue_title} [#{issue_prefix}{issue_number}]"
 
@@ -126,12 +126,20 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         if issue_epic_number:
             commit_message += f"\n\nissue epic: [#{issue_prefix}{issue_epic_number}]"
-        
-        if issue_subtask:
-            commit_message += f"\nissue subtask: [#{issue_prefix}{issue_subtask}]"
-        
-        if issue_related_task:
-            commit_message += f"\nissue related task: [#{issue_prefix}{issue_related_task}]"
+
+        if issue_subtasks:
+            subtasks_list = [
+                f"#{issue_prefix}{subtask.strip()}"
+                for subtask in issue_subtasks.split(',')
+            ]
+            commit_message += f"\nissue subtask: [{', '.join(subtasks_list)}]"
+
+        if issue_related_tasks:
+            related_tasks_list = [
+                f"#{issue_prefix}{related_task.strip()}"
+                for related_task in issue_related_tasks.split(',')
+            ]
+            commit_message += f"\nissue related task: [{', '.join(related_tasks_list)}]"
 
         return commit_message
 
