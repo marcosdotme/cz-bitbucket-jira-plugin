@@ -1,6 +1,10 @@
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
+
+from .validators import all_values_must_be_integer_validator
+from .validators import apply_multiple_validators
+from .validators import must_be_integer_validator
 from .validators import required_answer_validator
 
 
@@ -53,13 +57,19 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'name': 'issue_epic_number',
                 'message': 'Issue epic number:\n ',
+                'validate': must_be_integer_validator,
                 'qmark': '\n '
             },
             {
                 'type': 'input',
                 'name': 'issue_number',
                 'message': 'Issue number:\n ',
-                'validate': required_answer_validator,
+                'validate': apply_multiple_validators(
+                    validators=[
+                        required_answer_validator,
+                        must_be_integer_validator
+                    ]
+                ),
                 'qmark': '\n*'
             },
             {
@@ -67,6 +77,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_subtask',
                 'message': 'Issue subtask number:\n',
                 'instruction': multiple_items_instruction,
+                'validate': all_values_must_be_integer_validator,
                 'qmark': '\n '
             },
             {
@@ -74,6 +85,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_related_task',
                 'message': 'Issue related task number:\n',
                 'instruction': multiple_items_instruction,
+                'validate': all_values_must_be_integer_validator,
                 'qmark': '\n '
             },
             {
