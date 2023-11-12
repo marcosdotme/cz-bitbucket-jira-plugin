@@ -6,12 +6,15 @@ from .validators import all_values_must_be_integer_validator
 from .validators import apply_multiple_validators
 from .validators import must_be_integer_validator
 from .validators import required_answer_validator
+from .constants import COMMIT_TYPES_WITH_EMOJIS
+from .constants import COMMIT_TYPES_WITHOUT_EMOJIS
 
 
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
         self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
+        self.use_emoji = self.config.settings.get('use_emoji', False)
         self.config.update(
             {
                 'style': [
@@ -44,6 +47,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         multiline_instruction = (
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
         )
+        select_instruction = '(use arrow keys to select and press [enter])'
 
         questions = [
             {
@@ -87,6 +91,18 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'instruction': multiple_items_instruction,
                 'validate': all_values_must_be_integer_validator,
                 'qmark': '\n '
+            },
+            {
+                'type': 'select',
+                'name': 'issue_type',
+                'message': 'Select the issue type:\n ',
+                'choices': (
+                    COMMIT_TYPES_WITH_EMOJIS if self.use_emoji
+                    else COMMIT_TYPES_WITHOUT_EMOJIS
+                ),
+                'pointer': '>',
+                'instruction': f"{select_instruction}\n",
+                'qmark': '\n*'
             },
             {
                 'type': 'input',

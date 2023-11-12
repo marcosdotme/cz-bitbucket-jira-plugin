@@ -1,0 +1,11 @@
+[tool.commitizen]
+name = "cz_bitbucket_jira_plugin"
+jira_base_url = "https://marcos-martins-lab.atlassian.net/"
+jira_project_issue_prefix = "BI"
+use_emoji = true
+bitbucket_workspace = "marcos-martins-lab"
+bitbucket_repository = "commitizen-plugin"
+
+[tool.blue]
+line-length = 100
+extend-exclude = 'setup\.py|teste\.py'
