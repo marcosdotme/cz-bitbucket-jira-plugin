@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cz_bitbucket_jira_plugin"
+version = "0.1.0"
+description = "Commitizen plugin that links your Bitbucket commits with your Jira cards"
+authors = ["Marcos Martins <contato@marcosmartins.me>"]
+packages = [{include = "cz_bitbucket_jira_plugin"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+commitizen = "^3.24.0"
+
+[tool.commitizen]
+name = "cz_bitbucket_jira_plugin"
+jira_project_issue_prefix = "LAB"
+
+[tool.poetry.plugins."commitizen.plugin"]
+"cz_bitbucket_jira_plugin" = "cz_bitbucket_jira_plugin.main:CzBitbucketJiraPlugin"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
