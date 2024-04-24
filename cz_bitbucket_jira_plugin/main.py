@@ -11,7 +11,6 @@ from .validators import required_answer_validator
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
-        self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
         self.config.update(
             {
                 'style': [
@@ -28,6 +27,20 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 ]
             }
         )
+        self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
+        self.commit_types = [
+            {'value': 'init', 'name': 'init: initial commit to set up your repository'},
+            {'value': 'feat', 'name': 'feat: introduce a new feature'},
+            {'value': 'fix', 'name': 'fix: fix a bug'},
+            {'value': 'docs', 'name': 'docs: add or update documentation'},
+            {'value': 'typo', 'name': 'typo: fix typos'},
+            {'value': 'refactor', 'name': 'refactor: code refactoring'},
+            {'value': 'perf', 'name': 'perf: code refactoring that improves performance'},
+            {'value': 'delete', 'name': 'delete: code or file deletion'},
+            {'value': 'test', 'name': 'test: add or update tests'},
+            {'value': 'misc', 'name': 'misc: changes that do not affect the code itself (e.g.: add .gitignore)'},
+            {'value': 'style', 'name': 'style: changes on code styling (e.g.: formatting, white-spaces)'}
+        ]
 
         super().__init__(self.config)
 
@@ -44,6 +57,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         multiline_instruction = (
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
         )
+        select_instruction = '(use arrow keys to select and press [enter])\n'
 
         questions = [
             {
@@ -75,7 +89,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             },
             {
                 'type': 'input',
-                'name': 'issue_subtask',
+                'name': 'issue_subtasks',
                 'message': 'Issue subtask number:\n',
                 'instruction': multiple_items_instruction,
                 'validate': all_values_must_be_integer_validator,
@@ -83,16 +97,25 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             },
             {
                 'type': 'input',
-                'name': 'issue_related_task',
+                'name': 'issue_related_tasks',
                 'message': 'Issue related task number:\n',
                 'instruction': multiple_items_instruction,
                 'validate': all_values_must_be_integer_validator,
                 'qmark': '\n '
             },
             {
+                'type': 'select',
+                'name': 'commit_type',
+                'message': 'Select the commit type:\n ',
+                'choices': self.commit_types,
+                'pointer': '>',
+                'instruction': select_instruction,
+                'qmark': '\n*'
+            },
+            {
                 'type': 'input',
-                'name': 'issue_title',
-                'message': 'Issue title:\n ',
+                'name': 'commit_title',
+                'message': 'Commit title:\n ',
                 'validate': required_answer_validator,
                 'qmark': '\n*'
             },
@@ -100,8 +123,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'multiline': True,
                 'instruction': multiline_instruction,
-                'name': 'issue_description',
-                'message': 'Issue description:\n',
+                'name': 'commit_description',
+                'message': 'Commit description:\n',
                 'qmark': '\n '
             }
         ]
@@ -113,17 +136,21 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         if issue_prefix:
             issue_prefix += '-'
 
-        issue_title = answers.get('issue_title')
         issue_number = answers.get('issue_number')
-        issue_description = answers.get('issue_description')
         issue_epic_number = answers.get('issue_epic_number')
-        issue_subtasks = answers.get('issue_subtask')
-        issue_related_tasks = answers.get('issue_related_task')
+        issue_subtasks = answers.get('issue_subtasks')
+        issue_related_tasks = answers.get('issue_related_tasks')
+        commit_title = answers.get('commit_title')
+        commit_description = answers.get('commit_description')
+        commit_type = answers.get('commit_type')
 
-        commit_message = f"{issue_title} [{issue_prefix}{issue_number}]"
+        commit_message = (
+            f"{commit_type}: {commit_title} [{issue_prefix}{issue_number}]" if commit_type
+            else f"{commit_title} [{issue_prefix}{issue_number}]"
+        )
 
-        if issue_description:
-            commit_message += f"\n\n{issue_description}"
+        if commit_description:
+            commit_message += f"\n\n{commit_description}"
 
         if issue_epic_number:
             commit_message += f"\n\nissue epic: [{issue_prefix}{issue_epic_number}]"
@@ -133,14 +160,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 f"{issue_prefix}{subtask.strip()}"
                 for subtask in issue_subtasks.split(',')
             ]
-            commit_message += f"\nissue subtask: [{', '.join(subtasks_list)}]"
+            commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"
 
         if issue_related_tasks:
             related_tasks_list = [
                 f"{issue_prefix}{related_task.strip()}"
                 for related_task in issue_related_tasks.split(',')
             ]
-            commit_message += f"\nissue related task: [{', '.join(related_tasks_list)}]"
+            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"
 
         return commit_message
 
