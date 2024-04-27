@@ -143,6 +143,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         commit_title = answers.get('commit_title')
         commit_title = commit_title[:1].lower() + commit_title[1:]
+        commit_title = commit_title.strip().rstrip('.')
 
         commit_description = answers.get('commit_description')
         commit_type = answers.get('commit_type')
