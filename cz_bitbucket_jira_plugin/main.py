@@ -140,7 +140,10 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         issue_epic_number = answers.get('issue_epic_number')
         issue_subtasks = answers.get('issue_subtasks')
         issue_related_tasks = answers.get('issue_related_tasks')
+
         commit_title = answers.get('commit_title')
+        commit_title = commit_title[:1].lower() + commit_title[1:]
+
         commit_description = answers.get('commit_description')
         commit_type = answers.get('commit_type')
 
