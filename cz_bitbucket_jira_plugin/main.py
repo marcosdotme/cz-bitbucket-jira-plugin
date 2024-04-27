@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
@@ -138,8 +140,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         issue_number = answers.get('issue_number')
         issue_epic_number = answers.get('issue_epic_number')
+
         issue_subtasks = answers.get('issue_subtasks')
+        issue_subtasks = [task.strip() for task in issue_subtasks.split(',')]
+        issue_subtasks = list(OrderedDict.fromkeys(issue_subtasks))
+
         issue_related_tasks = answers.get('issue_related_tasks')
+        issue_related_tasks = [task.strip() for task in issue_related_tasks.split(',')]
+        issue_related_tasks = list(OrderedDict.fromkeys(issue_related_tasks))
 
         commit_title = answers.get('commit_title')
         commit_title = commit_title[:1].lower() + commit_title[1:]
@@ -160,17 +168,11 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             commit_message += f"\n\nissue epic: [{issue_prefix}{issue_epic_number}]"
 
         if issue_subtasks:
-            subtasks_list = [
-                f"{issue_prefix}{subtask.strip()}"
-                for subtask in issue_subtasks.split(',')
-            ]
+            subtasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_subtasks]
             commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"
 
         if issue_related_tasks:
-            related_tasks_list = [
-                f"{issue_prefix}{related_task.strip()}"
-                for related_task in issue_related_tasks.split(',')
-            ]
+            related_tasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_related_tasks]
             commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"
 
         return commit_message
