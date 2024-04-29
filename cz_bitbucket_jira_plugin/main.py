@@ -4,6 +4,7 @@ from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
 
+from .constants import DEFAULT_COMMIT_TYPES
 from .validators import all_values_must_be_integer_validator
 from .validators import apply_multiple_validators
 from .validators import must_be_integer_validator
@@ -30,19 +31,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             }
         )
         self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
-        self.commit_types = [
-            {'value': 'init', 'name': 'init: initial commit to set up your repository'},
-            {'value': 'feat', 'name': 'feat: introduce a new feature'},
-            {'value': 'fix', 'name': 'fix: fix a bug'},
-            {'value': 'docs', 'name': 'docs: add or update documentation'},
-            {'value': 'typo', 'name': 'typo: fix typos'},
-            {'value': 'refactor', 'name': 'refactor: code refactoring'},
-            {'value': 'perf', 'name': 'perf: code refactoring that improves performance'},
-            {'value': 'delete', 'name': 'delete: code or file deletion'},
-            {'value': 'test', 'name': 'test: add or update tests'},
-            {'value': 'misc', 'name': 'misc: changes that do not affect the code itself (e.g.: add .gitignore)'},
-            {'value': 'style', 'name': 'style: changes on code styling (e.g.: formatting, white-spaces)'}
-        ]
+        self.user_commit_types = self.config.settings.get('commit_types')
+        self.commit_types = self.user_commit_types or DEFAULT_COMMIT_TYPES
 
         super().__init__(self.config)
 
