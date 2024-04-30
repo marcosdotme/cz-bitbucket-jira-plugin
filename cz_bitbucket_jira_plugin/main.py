@@ -58,7 +58,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': "What's the jira prefix?",
                 'instruction': default_prefix,
                 'validate': required_answer_validator if not self.project_prefix else None,
-                'qmark': ' '
+                'qmark': ' ' if self.project_prefix else '\n*'
             },
             {
                 'type': 'input',
