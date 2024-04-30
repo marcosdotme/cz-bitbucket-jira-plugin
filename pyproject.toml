@@ -8,6 +8,7 @@ packages = [{include = "cz_bitbucket_jira_plugin"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 commitizen = "^3.24.0"
+tomli = "^2.0.1"
 
 [tool.commitizen]
 name = "cz_bitbucket_jira_plugin"

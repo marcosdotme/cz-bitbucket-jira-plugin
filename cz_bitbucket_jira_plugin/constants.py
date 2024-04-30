@@ -11,3 +11,18 @@ DEFAULT_COMMIT_TYPES = [
     {'value': 'misc', 'name': 'misc: changes that do not affect the code itself (e.g.: add .gitignore)'},
     {'value': 'style', 'name': 'style: changes on code styling (e.g.: formatting, white-spaces)'}
 ]
+
+DEFAULT_PROMPT_STYLE = {
+    'style': [
+        ('qmark', 'fg:#FF5555'),
+        ('question', 'fg:#BD93F9'),
+        ('answer', 'fg:#F8F8F2 nobold'),
+        ('pointer', 'fg:#50FA7B nobold'),
+        ('highlighted', 'fg:#50FA7B'),
+        ('selected', 'fg:#50FA7B'),
+        ('separator', 'fg:#858585'),
+        ('instruction', 'fg:#858585 nobold'),
+        ('text', 'fg:#F8F8F2'),
+        ('disabled', 'fg:#858585 italic'),
+    ]
+}

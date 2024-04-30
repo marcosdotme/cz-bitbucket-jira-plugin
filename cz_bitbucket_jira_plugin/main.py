@@ -5,6 +5,8 @@ from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
 
 from .constants import DEFAULT_COMMIT_TYPES
+from .constants import DEFAULT_PROMPT_STYLE
+from .functions import get_user_prompt_style
 from .validators import all_values_must_be_integer_validator
 from .validators import apply_multiple_validators
 from .validators import must_be_integer_validator
@@ -14,25 +16,13 @@ from .validators import required_answer_validator
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
-        self.config.update(
-            {
-                'style': [
-                    ('qmark', 'fg:#ff5555'),
-                    ('question', 'fg:#bd93f9'),
-                    ('answer', 'fg:#f8f8f2 nobold'),
-                    ('pointer', 'fg:#ff9d00'),
-                    ('highlighted', 'fg:#ff9d00'),
-                    ('selected', 'fg:#cc5454'),
-                    ('separator', 'fg:#cc5454'),
-                    ('instruction', 'fg:#858585 nobold'),
-                    ('text', 'fg:#ffffff'),
-                    ('disabled', 'fg:#858585 italic'),
-                ]
-            }
-        )
+
         self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
         self.user_commit_types = self.config.settings.get('commit_types')
+        self.user_prompt_style = get_user_prompt_style()
+
         self.commit_types = self.user_commit_types or DEFAULT_COMMIT_TYPES
+        self.config.update(self.user_prompt_style or DEFAULT_PROMPT_STYLE)
 
         super().__init__(self.config)
 
