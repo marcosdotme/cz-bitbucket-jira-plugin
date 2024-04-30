@@ -17,7 +17,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
 
-        self.project_prefix = self.config.settings.get('jira_project_issue_prefix')
+        self.user_jira_project_key = self.config.settings.get('jira_project_key')
         self.user_commit_types = self.config.settings.get('commit_types')
         self.user_prompt_style = get_user_prompt_style()
 
@@ -27,8 +27,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         super().__init__(self.config)
 
     def questions(self) -> Questions:
-        if self.project_prefix:
-            default_prefix = f"(default: {self.project_prefix})\n "
+        if self.user_jira_project_key:
+            default_prefix = f"(default: {self.user_jira_project_key})\n "
         else:
             default_prefix = '\n '
 
@@ -47,8 +47,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_prefix',
                 'message': "What's the jira prefix?",
                 'instruction': default_prefix,
-                'validate': required_answer_validator if not self.project_prefix else None,
-                'qmark': ' ' if self.project_prefix else '\n*'
+                'validate': required_answer_validator if not self.user_jira_project_key else None,
+                'qmark': ' ' if self.user_jira_project_key else '\n*'
             },
             {
                 'type': 'input',
@@ -113,7 +113,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         return questions
 
     def message(self, answers: dict) -> str:
-        issue_prefix = str(answers.get('issue_prefix') or self.project_prefix or '')
+        issue_prefix = str(answers.get('issue_prefix') or self.user_jira_project_key or '')
 
         if issue_prefix:
             issue_prefix += '-'
