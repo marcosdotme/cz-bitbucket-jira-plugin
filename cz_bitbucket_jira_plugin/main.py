@@ -33,8 +33,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             default_prefix = '\n '
 
         multiple_items_instruction = (
-            f"if more than one, use comma to separate them."
-            f" (press [enter] to skip)\n "
+            'if more than one, use comma to separate them.'
+            ' (press [enter] to skip)\n '
         )
         multiline_instruction = (
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
