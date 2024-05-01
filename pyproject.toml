@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cz_bitbucket_jira_plugin"
 version = "0.1.0"
-description = "Commitizen plugin that links your Bitbucket commits with your Jira cards"
+description = "Commitizen plugin that links your Bitbucket commits with your Jira issues"
 authors = ["Marcos Martins <contato@marcosmartins.me>"]
 packages = [{include = "cz_bitbucket_jira_plugin"}]
 
