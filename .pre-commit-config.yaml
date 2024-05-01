@@ -8,10 +8,6 @@ repos:
     -   id: end-of-file-fixer
         name: add-empty-line-to-end-of-file
 
-    -   id: no-commit-to-branch
-        name: no-commit-to-branch
-        args: [--branch, main]
-
 -   repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.5.5
     hooks:
