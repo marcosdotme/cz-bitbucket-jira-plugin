@@ -40,7 +40,7 @@ def apply_multiple_validators(validators: List[Callable]):
         for validator in validators:
             result = validator(answer)
 
-            if result != True:
+            if not result:
                 return result
 
         return True
