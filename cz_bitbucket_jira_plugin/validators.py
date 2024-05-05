@@ -40,7 +40,7 @@ def apply_multiple_validators(validators: List[Callable]):
         for validator in validators:
             result = validator(answer)
 
-            if not result:
+            if result != True: # noqa: E712
                 return result
 
         return True
