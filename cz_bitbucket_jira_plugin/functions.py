@@ -23,7 +23,7 @@ def get_config_file() -> Path:
         if config_file_is_valid(config_file=config_file):
             return config_file
     
-    raise AttributeError('Missing [tool.commitizen] block on your config file.')
+    raise AttributeError('Missing [tool.commitizen] table on your config file.')
 
 
 def get_user_prompt_style():
