@@ -28,13 +28,12 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
     def questions(self) -> Questions:
         if self.user_jira_project_key:
-            default_prefix = f"(default: {self.user_jira_project_key})\n "
+            default_prefix = f"(default: {self.user_jira_project_key})\n "  # fmt: skip
         else:
             default_prefix = '\n '
 
         multiple_items_instruction = (
-            'if more than one, use comma to separate them.'
-            ' (press [enter] to skip)\n '
+            'if more than one, use comma to separate them. (press [enter] to skip)\n '
         )
         multiline_instruction = (
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
@@ -47,15 +46,17 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_prefix',
                 'message': "What's the jira prefix?",
                 'instruction': default_prefix,
-                'validate': required_answer_validator if not self.user_jira_project_key else None,
-                'qmark': ' ' if self.user_jira_project_key else '\n*'
+                'validate': (
+                    required_answer_validator if not self.user_jira_project_key else None
+                ),
+                'qmark': ' ' if self.user_jira_project_key else '\n*',
             },
             {
                 'type': 'input',
                 'name': 'issue_epic_number',
                 'message': 'Issue epic number:\n ',
                 'validate': must_be_integer_validator,
-                'qmark': '\n '
+                'qmark': '\n ',
             },
             {
                 'type': 'input',
@@ -64,10 +65,10 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'validate': apply_multiple_validators(
                     validators=[
                         required_answer_validator,
-                        must_be_integer_validator
+                        must_be_integer_validator,
                     ]
                 ),
-                'qmark': '\n*'
+                'qmark': '\n*',
             },
             {
                 'type': 'input',
@@ -75,7 +76,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': 'Issue subtask number:\n',
                 'instruction': multiple_items_instruction,
                 'validate': all_values_must_be_integer_validator,
-                'qmark': '\n '
+                'qmark': '\n ',
             },
             {
                 'type': 'input',
@@ -83,7 +84,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': 'Issue related task number:\n',
                 'instruction': multiple_items_instruction,
                 'validate': all_values_must_be_integer_validator,
-                'qmark': '\n '
+                'qmark': '\n ',
             },
             {
                 'type': 'select',
@@ -92,14 +93,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'choices': self.commit_types,
                 'pointer': '>',
                 'instruction': select_instruction,
-                'qmark': '\n*'
+                'qmark': '\n*',
             },
             {
                 'type': 'input',
                 'name': 'commit_title',
                 'message': 'Commit title:\n ',
                 'validate': required_answer_validator,
-                'qmark': '\n*'
+                'qmark': '\n*',
             },
             {
                 'type': 'input',
@@ -107,13 +108,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'instruction': multiline_instruction,
                 'name': 'commit_description',
                 'message': 'Commit description:\n',
-                'qmark': '\n '
-            }
+                'qmark': '\n ',
+            },
         ]
         return questions
 
     def message(self, answers: dict) -> str:
-        issue_prefix = str(answers.get('issue_prefix') or self.user_jira_project_key or '')
+        issue_prefix = str(
+            answers.get('issue_prefix') or self.user_jira_project_key or ''
+        )
 
         if issue_prefix:
             issue_prefix += '-'
@@ -136,24 +139,26 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         commit_description = answers.get('commit_description')
         commit_type = answers.get('commit_type')
 
+        # fmt: off
         commit_message = (
             f"{commit_type}: {commit_title} [{issue_prefix}{issue_number}]" if commit_type
             else f"{commit_title} [{issue_prefix}{issue_number}]"
         )
+        # fmt: on
 
         if commit_description:
-            commit_message += f"\n\n{commit_description}"
+            commit_message += f"\n\n{commit_description}"  # fmt: skip
 
         if issue_epic_number:
-            commit_message += f"\n\nissue epic: [{issue_prefix}{issue_epic_number}]"
+            commit_message += f"\n\nissue epic: [{issue_prefix}{issue_epic_number}]"  # fmt: skip
 
         if issue_subtasks:
-            subtasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_subtasks]
-            commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"
+            subtasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_subtasks]  # fmt: skip
+            commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
 
         if issue_related_tasks:
-            related_tasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_related_tasks]
-            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"
+            related_tasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
+            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
 
         return commit_message
 
