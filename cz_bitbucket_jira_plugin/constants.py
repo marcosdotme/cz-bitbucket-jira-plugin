@@ -8,8 +8,14 @@ DEFAULT_COMMIT_TYPES = [
     {'value': 'perf', 'name': 'perf: code refactoring that improves performance'},
     {'value': 'delete', 'name': 'delete: code or file deletion'},
     {'value': 'test', 'name': 'test: add or update tests'},
-    {'value': 'misc', 'name': 'misc: changes that do not affect the code itself (e.g.: add .gitignore)'},
-    {'value': 'style', 'name': 'style: changes on code styling (e.g.: formatting, white-spaces)'}
+    {
+        'value': 'misc',
+        'name': 'misc: changes that do not affect the code itself (e.g.: add .gitignore)',
+    },
+    {
+        'value': 'style',
+        'name': 'style: changes on code styling (e.g.: formatting, white-spaces)',
+    },
 ]
 
 DEFAULT_PROMPT_STYLE = {

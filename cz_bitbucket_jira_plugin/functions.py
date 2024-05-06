@@ -22,7 +22,7 @@ def get_config_file() -> Path:
     for config_file in config_files:
         if config_file_is_valid(config_file=config_file):
             return config_file
-    
+
     raise AttributeError('Missing [tool.commitizen] table on your config file.')
 
 

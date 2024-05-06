@@ -26,7 +26,7 @@ def must_be_integer_validator(answer):
 
 def all_values_must_be_integer_validator(answer):
     # Anything that is not a number, comma or whitespace character
-    invalid_chars_pattern = re.compile("[^0-9,\s]+")
+    invalid_chars_pattern = re.compile('[^0-9,\s]+')
     invalid_chars = invalid_chars_pattern.findall(answer)
 
     if invalid_chars:
@@ -40,7 +40,7 @@ def apply_multiple_validators(validators: List[Callable]):
         for validator in validators:
             result = validator(answer)
 
-            if result != True: # noqa: E712
+            if result != True:  # noqa: E712
                 return result
 
         return True

@@ -14,7 +14,20 @@ tomli = "^2.0.1"
 name = "cz_bitbucket_jira_plugin"
 
 [tool.poetry.plugins."commitizen.plugin"]
-"cz_bitbucket_jira_plugin" = "cz_bitbucket_jira_plugin.main:CzBitbucketJiraPlugin"
+
+[tool.ruff]
+line-length = 90
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+docstring-code-line-length = 99
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
 
 [build-system]
 requires = ["poetry-core"]
