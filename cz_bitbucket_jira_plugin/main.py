@@ -167,7 +167,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         Used by `cz example`.
         """
-        return 'Problem with user (#321)'
+        return (
+            'feat: create `apply_multiple_validators` function [CZ-1032]'
+            '\n\n'
+            'Allow us to apply multiple validators to a single question'
+            '\n\n'
+            'issue epic: [CZ-959]\n'
+            'issue subtasks: [CZ-1033, CZ-1034]\n'
+            'issue related tasks: [CZ-1005]'
+        )
 
     def schema(self) -> str:
         """Show the schema used (OPTIONAL)
