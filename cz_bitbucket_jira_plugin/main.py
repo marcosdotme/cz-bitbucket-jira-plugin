@@ -28,9 +28,9 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
     def questions(self) -> Questions:
         if self.user_jira_project_key:
-            default_prefix = f"(default: {self.user_jira_project_key})\n "  # fmt: skip
+            default_jira_project_key = f"(default: {self.user_jira_project_key})\n "  # fmt: skip
         else:
-            default_prefix = '\n '
+            default_jira_project_key = '\n '
 
         multiple_items_instruction = (
             'if more than one, use comma to separate them. (press [enter] to skip)\n '
@@ -43,9 +43,9 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         questions = [
             {
                 'type': 'input',
-                'name': 'issue_prefix',
-                'message': "What's the jira prefix?",
-                'instruction': default_prefix,
+                'name': 'jira_project_key',
+                'message': "What's the Jira project key?",
+                'instruction': default_jira_project_key,
                 'validate': (
                     required_answer_validator if not self.user_jira_project_key else None
                 ),
@@ -114,12 +114,12 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         return questions
 
     def message(self, answers: dict) -> str:
-        issue_prefix = str(
-            answers.get('issue_prefix') or self.user_jira_project_key or ''
+        jira_project_key = str(
+            answers.get('jira_project_key') or self.user_jira_project_key or ''
         )
 
-        if issue_prefix:
-            issue_prefix += '-'
+        if jira_project_key:
+            jira_project_key += '-'
 
         issue_number = answers.get('issue_number')
         issue_epic_number = answers.get('issue_epic_number')
@@ -141,8 +141,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         # fmt: off
         commit_message = (
-            f"{commit_type}: {commit_title} [{issue_prefix}{issue_number}]" if commit_type
-            else f"{commit_title} [{issue_prefix}{issue_number}]"
+            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]" if commit_type
+            else f"{commit_title} [{jira_project_key}{issue_number}]"
         )
         # fmt: on
 
@@ -150,14 +150,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             commit_message += f"\n\n{commit_description}"  # fmt: skip
 
         if issue_epic_number:
-            commit_message += f"\n\nissue epic: [{issue_prefix}{issue_epic_number}]"  # fmt: skip
+            commit_message += f"\n\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
 
         if issue_subtasks:
-            subtasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_subtasks]  # fmt: skip
+            subtasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_subtasks]  # fmt: skip
             commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
 
         if issue_related_tasks:
-            related_tasks_list = [f"{issue_prefix}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
+            related_tasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
             commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
 
         return commit_message
