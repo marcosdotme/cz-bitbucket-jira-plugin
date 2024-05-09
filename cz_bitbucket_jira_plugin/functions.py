@@ -18,9 +18,15 @@ def config_file_is_valid(config_file: str | Path) -> bool:
 
 def get_config_file() -> Path:
     config_files = [Path('pyproject.toml'), Path('.cz.toml')]
+    any_config_file_exists = any([file.exists() for file in config_files])
+
+    if not any_config_file_exists:
+        raise FileNotFoundError(
+            'Missing any config file, check the documentation for more details.'
+        )
 
     for config_file in config_files:
-        if config_file_is_valid(config_file=config_file):
+        if config_file.exists() and config_file_is_valid(config_file=config_file):
             return config_file
 
     raise AttributeError('Missing [tool.commitizen] table on your config file.')
