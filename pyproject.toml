@@ -1,19 +1,45 @@
-[tool.poetry]
-name = "cz_bitbucket_jira_plugin"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cz-bitbucket-jira-plugin"
 version = "0.1.0"
 description = "Commitizen plugin that links your Bitbucket commits with your Jira issues"
-authors = ["Marcos Martins <contato@marcosmartins.me>"]
-packages = [{include = "cz_bitbucket_jira_plugin"}]
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+keywords = [
+    "commitizen",
+    "commitizen-plugin",
+    "conventional-commits",
+    "jira",
+    "bitbucket"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+authors = [
+    { name = "Marcos Martins", email = "contato@marcosmartins.me" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "commitizen>=3.24.0",
+    "tomli>=2.0.1"
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-commitizen = "^3.24.0"
-tomli = "^2.0.1"
+[project.entry-points."commitizen.plugin"]
+cz-bitbucket-jira-plugin = "cz_bitbucket_jira_plugin.main:CzBitbucketJiraPlugin"
 
-[tool.commitizen]
-name = "cz_bitbucket_jira_plugin"
-
-[tool.poetry.plugins."commitizen.plugin"]
+[project.urls]
+Source = "https://github.com/marcosdotme/cz-bitbucket-jira-plugin"
+Tracker = "https://github.com/marcosdotme/cz-bitbucket-jira-plugin/issues"
 
 [tool.ruff]
 line-length = 90
@@ -28,7 +54,3 @@ docstring-code-line-length = 99
 
 [tool.ruff.lint.flake8-quotes]
 docstring-quotes = "double"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
