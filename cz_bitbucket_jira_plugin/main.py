@@ -182,7 +182,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         Used by `cz schema`.
         """
-        return '<title> (<issue>)'
+        return (
+            '<commit_type>: <commit_title> [<jira_project_key>-<jira_issue_number>]\n'
+            '<newline>\n'
+            '<commit_description>\n'
+            '<newline>\n'
+            'issue epic: [<jira_project_key>-<jira_issue_epic_number>]\n'
+            'issue subtasks: [<jira_project_key>-<jira_issue_subtasks_number>]\n'
+            'issue related: tasks [<jira_project_key>-<jira_issue_related_tasks_number>]'
+        )
 
     def info(self) -> str:
         """Explanation of the commit rules. (OPTIONAL)
