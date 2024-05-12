@@ -123,14 +123,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         issue_number = answers.get('issue_number')
         issue_epic_number = answers.get('issue_epic_number')
-
         issue_subtasks = answers.get('issue_subtasks')
-        issue_subtasks = [task.strip() for task in issue_subtasks.split(',')]
-        issue_subtasks = list(OrderedDict.fromkeys(issue_subtasks))
-
         issue_related_tasks = answers.get('issue_related_tasks')
-        issue_related_tasks = [task.strip() for task in issue_related_tasks.split(',')]
-        issue_related_tasks = list(OrderedDict.fromkeys(issue_related_tasks))
 
         commit_title = answers.get('commit_title')
         commit_title = commit_title[:1].lower() + commit_title[1:]
@@ -141,26 +135,31 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         # fmt: off
         commit_message = (
-            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]" if commit_type
-            else f"{commit_title} [{jira_project_key}{issue_number}]"
+            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]\n"
         )
         # fmt: on
 
         if commit_description:
-            commit_message += f"\n\n{commit_description}"  # fmt: skip
+            commit_message += f"\n{commit_description}\n"  # fmt: skip
 
         if issue_epic_number:
-            commit_message += f"\n\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
+            commit_message += f"\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
 
         if issue_subtasks:
+            issue_subtasks = [task.strip() for task in issue_subtasks.split(',')]
+            issue_subtasks = list(OrderedDict.fromkeys(issue_subtasks))
             subtasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_subtasks]  # fmt: skip
             commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
 
         if issue_related_tasks:
+            issue_related_tasks = [
+                task.strip() for task in issue_related_tasks.split(',')
+            ]
+            issue_related_tasks = list(OrderedDict.fromkeys(issue_related_tasks))
             related_tasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
             commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
 
-        return commit_message
+        return commit_message.rstrip()
 
     def example(self) -> str:
         """Provide an example to help understand the style (OPTIONAL)
@@ -168,10 +167,10 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         Used by `cz example`.
         """
         return (
-            'feat: create `apply_multiple_validators` function [CZ-1032]'
-            '\n\n'
-            'Allow us to apply multiple validators to a single question'
-            '\n\n'
+            'feat: create `apply_multiple_validators` function [CZ-1032]\n'
+            '\n'
+            'Allow us to apply multiple validators to a single question\n'
+            '\n'
             'issue epic: [CZ-959]\n'
             'issue subtasks: [CZ-1033, CZ-1034]\n'
             'issue related tasks: [CZ-1005]'
@@ -189,7 +188,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             '<newline>\n'
             'issue epic: [<jira_project_key>-<jira_issue_epic_number>]\n'
             'issue subtasks: [<jira_project_key>-<jira_issue_subtasks_number>]\n'
-            'issue related: tasks [<jira_project_key>-<jira_issue_related_tasks_number>]'
+            'issue related tasks: [<jira_project_key>-<jira_issue_related_tasks_number>]'
         )
 
     def info(self) -> str:
