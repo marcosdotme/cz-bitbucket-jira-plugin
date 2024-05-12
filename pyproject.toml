@@ -54,3 +54,6 @@ docstring-code-line-length = 99
 
 [tool.ruff.lint.flake8-quotes]
 docstring-quotes = "double"
+
+[tool.pytest.ini_options]
+addopts = "--verbose --exitfirst --showlocals --capture=no"
