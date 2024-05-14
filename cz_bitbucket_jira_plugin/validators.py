@@ -53,7 +53,7 @@ class AllValuesMustBeIntegerValidator(Validator):
 
         # Anything that is not a number, comma or whitespace character
         pattern = re.compile(r'[^0-9,\s]+')
-        invalid_chars = pattern.findall(answer)
+        invalid_chars = pattern.findall(str(answer))
 
         if invalid_chars:
             raise AllValuesMustBeIntegerException
