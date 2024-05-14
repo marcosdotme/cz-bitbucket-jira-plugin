@@ -7,10 +7,10 @@ from commitizen.defaults import Questions
 from .constants import DEFAULT_COMMIT_TYPES
 from .constants import DEFAULT_PROMPT_STYLE
 from .functions import get_user_prompt_style
-from .validators import all_values_must_be_integer_validator
+from .validators import AllValuesMustBeIntegerValidator
 from .validators import apply_multiple_validators
-from .validators import must_be_integer_validator
-from .validators import required_answer_validator
+from .validators import RequiredAnswerValidator
+from .validators import ValueMustBeIntegerValidator
 
 
 class CzBitbucketJiraPlugin(BaseCommitizen):
@@ -47,7 +47,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': "What's the Jira project key?",
                 'instruction': default_jira_project_key,
                 'validate': (
-                    required_answer_validator if not self.user_jira_project_key else None
+                    RequiredAnswerValidator if not self.user_jira_project_key else None
                 ),
                 'qmark': ' ' if self.user_jira_project_key else '\n*',
             },
@@ -55,7 +55,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'name': 'issue_epic_number',
                 'message': 'Issue epic number:\n ',
-                'validate': must_be_integer_validator,
+                'validate': ValueMustBeIntegerValidator,
                 'qmark': '\n ',
             },
             {
@@ -64,8 +64,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': 'Issue number:\n ',
                 'validate': apply_multiple_validators(
                     validators=[
-                        required_answer_validator,
-                        must_be_integer_validator,
+                        RequiredAnswerValidator,
+                        ValueMustBeIntegerValidator,
                     ]
                 ),
                 'qmark': '\n*',
@@ -75,7 +75,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_subtasks',
                 'message': 'Issue subtask number:\n',
                 'instruction': multiple_items_instruction,
-                'validate': all_values_must_be_integer_validator,
+                'validate': AllValuesMustBeIntegerValidator,
                 'qmark': '\n ',
             },
             {
@@ -83,7 +83,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'name': 'issue_related_tasks',
                 'message': 'Issue related task number:\n',
                 'instruction': multiple_items_instruction,
-                'validate': all_values_must_be_integer_validator,
+                'validate': AllValuesMustBeIntegerValidator,
                 'qmark': '\n ',
             },
             {
@@ -93,13 +93,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'choices': self.commit_types,
                 'pointer': '>',
                 'instruction': select_instruction,
+                'validator': RequiredAnswerValidator,
                 'qmark': '\n*',
             },
             {
                 'type': 'input',
                 'name': 'commit_title',
                 'message': 'Commit title:\n ',
-                'validate': required_answer_validator,
+                'validate': RequiredAnswerValidator,
                 'qmark': '\n*',
             },
             {

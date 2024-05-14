@@ -1,44 +1,73 @@
 from __future__ import annotations
 
+import inspect
 import re
 from typing import Callable
 from typing import List
 
+from prompt_toolkit.document import Document
+from prompt_toolkit.validation import Validator
 
-def required_answer_validator(answer):
-    if not answer:
-        return 'Answer is required.'
-
-    return True
+from .exceptions import AllValuesMustBeIntegerException
+from .exceptions import RequiredAnswerException
+from .exceptions import ValueMustBeIntegerException
 
 
-def must_be_integer_validator(answer):
-    if not answer:
+class RequiredAnswerValidator(Validator):
+    @classmethod
+    def validate(cls, answer):
+        if isinstance(answer, Document):
+            answer = answer.text
+
+        if not answer:
+            raise RequiredAnswerException
+
         return True
 
-    try:
-        int(answer)
-    except ValueError:
-        return 'Value must be integer.'
 
-    return True
+class ValueMustBeIntegerValidator(Validator):
+    @classmethod
+    def validate(cls, answer):
+        if isinstance(answer, Document):
+            answer = answer.text
+
+        if answer in ['', None]:
+            return True
+
+        try:
+            int(answer)
+        except ValueError:
+            raise ValueMustBeIntegerException
+
+        return True
 
 
-def all_values_must_be_integer_validator(answer):
-    # Anything that is not a number, comma or whitespace character
-    invalid_chars_pattern = re.compile('[^0-9,\s]+')
-    invalid_chars = invalid_chars_pattern.findall(answer)
+class AllValuesMustBeIntegerValidator(Validator):
+    @classmethod
+    def validate(cls, answer):
+        if isinstance(answer, Document):
+            answer = answer.text
 
-    if invalid_chars:
-        return 'All values must be integer.'
+        if answer in ['', None]:
+            return True
 
-    return True
+        # Anything that is not a number, comma or whitespace character
+        pattern = re.compile(r'[^0-9,\s]+')
+        invalid_chars = pattern.findall(answer)
+
+        if invalid_chars:
+            raise AllValuesMustBeIntegerException
+
+        return True
 
 
 def apply_multiple_validators(validators: List[Callable]):
     def apply_validators(answer):
         for validator in validators:
-            result = validator(answer)
+            if inspect.isclass(validator):
+                result = validator.validate(answer)
+            else:
+                result = validator(answer)
 
             if result != True:  # noqa: E712
                 return result
