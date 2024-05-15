@@ -33,6 +33,7 @@ dependencies = [
     "commitizen>=3.24.0",
     "tomli>=2.0.1"
 ]
+# dev-dependencies = [] pytest, tox
 
 [project.entry-points."commitizen.plugin"]
 cz-bitbucket-jira-plugin = "cz_bitbucket_jira_plugin.main:CzBitbucketJiraPlugin"
@@ -57,3 +58,19 @@ docstring-quotes = "double"
 
 [tool.pytest.ini_options]
 addopts = "--verbose --exitfirst --showlocals --capture=no"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 3.8.0
+envlist = py38, py39, py310, py311, py312
+isolated_build = true
+
+[gh]
+python =
+    3.8 = py38
+    3.9 = py39
+    3.10 = py310
+    3.11 = py311
+    3.12 = py312
+"""
