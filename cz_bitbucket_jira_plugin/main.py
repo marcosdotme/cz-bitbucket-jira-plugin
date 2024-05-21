@@ -111,6 +111,17 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'message': 'Commit description:\n',
                 'qmark': '\n ',
             },
+            {
+                'type': 'input',
+                'multiline': True,
+                'instruction': f'\n  {multiline_instruction}',
+                'name': 'footer',
+                'message': (
+                    'Footer. Information about Breaking Changes, '
+                    'Bitbucket Smart Commits syntax or whatever you want.'
+                ),
+                'qmark': '\n ',
+            },
         ]
         return questions
 
@@ -133,6 +144,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         commit_description = answers.get('commit_description')
         commit_type = answers.get('commit_type')
+        footer = answers.get('footer')
 
         # fmt: off
         commit_message = (
@@ -158,7 +170,10 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             ]
             issue_related_tasks = list(OrderedDict.fromkeys(issue_related_tasks))
             related_tasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
-            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
+            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]\n"  # fmt: skip
+
+        if footer:
+            commit_message += f"\n{footer}"  # fmt: skip
 
         return commit_message.rstrip()
 
@@ -174,7 +189,9 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             '\n'
             'issue epic: [CZ-959]\n'
             'issue subtasks: [CZ-1033, CZ-1034]\n'
-            'issue related tasks: [CZ-1005]'
+            'issue related tasks: [CZ-1005]\n'
+            '\n'
+            'CZ-1032 #done'
         )
 
     def schema(self) -> str:
@@ -184,12 +201,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         """
         return (
             '<commit_type>: <commit_title> [<jira_project_key>-<jira_issue_number>]\n'
-            '<newline>\n'
+            '<BLANK LINE>\n'
             '<commit_description>\n'
-            '<newline>\n'
+            '<BLANK LINE>\n'
             'issue epic: [<jira_project_key>-<jira_issue_epic_number>]\n'
             'issue subtasks: [<jira_project_key>-<jira_issue_subtasks_number>]\n'
-            'issue related tasks: [<jira_project_key>-<jira_issue_related_tasks_number>]'
+            'issue related tasks: [<jira_project_key>-<jira_issue_related_tasks_number>]\n'
+            '<BLANK LINE>\n'
+            '<footer>'
         )
 
     def info(self) -> str:
