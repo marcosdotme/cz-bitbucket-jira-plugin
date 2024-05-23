@@ -9,6 +9,7 @@ from .constants import DEFAULT_PROMPT_STYLE
 from .functions import get_user_prompt_style
 from .validators import AllValuesMustBeIntegerValidator
 from .validators import apply_multiple_validators
+from .validators import MinimumLengthValidator
 from .validators import RequiredAnswerValidator
 from .validators import ValueMustBeIntegerValidator
 
@@ -20,9 +21,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         self.user_jira_project_key = self.config.settings.get('jira_project_key')
         self.user_commit_types = self.config.settings.get('commit_types')
         self.user_prompt_style = get_user_prompt_style()
+        self.user_minimum_length = self.config.settings.get(
+            'commit_message_minimum_length'
+        )
 
         self.commit_types = self.user_commit_types or DEFAULT_COMMIT_TYPES
         self.config.update(self.user_prompt_style or DEFAULT_PROMPT_STYLE)
+
+        self.minimum_length = self.user_minimum_length or 32
 
         super().__init__(self.config)
 
@@ -100,7 +106,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'type': 'input',
                 'name': 'commit_title',
                 'message': 'Commit title:\n ',
-                'validate': RequiredAnswerValidator,
+                'validate': MinimumLengthValidator(minimum_length=self.minimum_length),
                 'qmark': '\n*',
             },
             {

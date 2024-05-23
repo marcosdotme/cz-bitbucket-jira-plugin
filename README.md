@@ -35,6 +35,20 @@ jira_project_key = "DEV"
 
 Now every time you execute `cz commit`, commitizen will use the **cz-bitbucket-jira-plugin** and use "DEV" as your default **Jira project key**.
 
+### Minimum length for commit messages
+
+You can set an minimum length for commit messages to prevent things like `"fix"`, `"wip"`, `"test"`, `"aaa"`, and so on...
+
+To do this, set this up in your chosen configuration file:
+
+```toml
+[tool.commitizen]
+name = "cz-bitbucket-jira-plugin"
+commit_message_minimum_length = 32
+```
+
+The default value for this config is `32`.
+
 ## Usage
 As long it's an [Commitizen](https://github.com/commitizen-tools/commitizen) plugin, you can:
 

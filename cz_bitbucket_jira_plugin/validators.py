@@ -9,6 +9,7 @@ from prompt_toolkit.document import Document
 from prompt_toolkit.validation import Validator
 
 from .exceptions import AllValuesMustBeIntegerException
+from .exceptions import MinimumLengthException
 from .exceptions import RequiredAnswerException
 from .exceptions import ValueMustBeIntegerException
 
@@ -75,3 +76,17 @@ def apply_multiple_validators(validators: List[Callable]):
         return True
 
     return apply_validators
+
+
+class MinimumLengthValidator(Validator):
+    def __init__(self, minimum_length: int) -> None:
+        self.minimum_length = minimum_length
+
+    def validate(self, answer):
+        if isinstance(answer, Document):
+            answer = answer.text
+
+        if len(answer) < self.minimum_length:
+            raise MinimumLengthException(minimum_length=self.minimum_length)
+
+        return True
