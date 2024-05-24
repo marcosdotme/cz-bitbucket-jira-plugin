@@ -14,7 +14,7 @@ from tests.constants import ANSWER_AND_EXPECTED_OUTPUT
     ],
     ids=itertools.count(start=1),
 )
-def test_message(setup_tmpdir, default_config, answers, expected_output):
+def test_commit_output(setup_tmpdir, default_config, answers, expected_output):
     cz = CzBitbucketJiraPlugin(config=default_config)
     output = cz.message(answers=answers)
 
