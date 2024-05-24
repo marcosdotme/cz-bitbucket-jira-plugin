@@ -14,7 +14,7 @@ def default_config():
 def setup_tmpdir(tmpdir):
     with tmpdir.as_cwd():
         path = tmpdir.mkdir('commitizen')
-        file_path = path.join('.cz.toml')
+        file_path = path.join('cz.toml')
         toml_config = TomlConfig(data='', path=file_path)
         toml_config.init_empty_config_content()
 

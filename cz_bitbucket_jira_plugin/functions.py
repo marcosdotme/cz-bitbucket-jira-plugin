@@ -17,7 +17,7 @@ def config_file_is_valid(config_file: str | Path) -> bool:
 
 
 def get_config_file() -> Path:
-    config_files = [Path('.cz.toml'), Path('pyproject.toml')]
+    config_files = [Path('cz.toml'), Path('pyproject.toml')]
     any_config_file_exists = any([file.exists() for file in config_files])
 
     if not any_config_file_exists:

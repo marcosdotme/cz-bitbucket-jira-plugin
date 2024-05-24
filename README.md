@@ -9,10 +9,10 @@ pip install cz-bitbucket-jira-plugin
 
 ## Configuration
 
-Theres 2 possible configuration files: `pyproject.toml` and `.cz.toml`. Up to you.
+Theres 2 possible configuration files: `pyproject.toml` and `cz.toml`. Up to you.
 
 > [!TIP]
-> If you already has an `pyproject.toml` in your project, use him. If not, create an `.cz.toml`.
+> If you already has an `pyproject.toml` in your project, use him. If not, create an `cz.toml`.
 
 The only required configuration is:
 
