@@ -2,6 +2,8 @@
 
 > An [Commitizen](https://github.com/commitizen-tools/commitizen)  plugin that links your Bitbucket commits with your Jira issues.
 
+![GIF](https://vhs.charm.sh/vhs-duzp35l3XRQoHAoMLX6wA.gif)
+
 ## Installation
 ```shell
 pip install cz-bitbucket-jira-plugin
