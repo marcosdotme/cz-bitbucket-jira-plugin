@@ -154,21 +154,25 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         # fmt: off
         commit_message = (
-            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]\n"
+            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]"
         )
         # fmt: on
 
         if commit_description:
-            commit_message += f"\n{commit_description}\n"  # fmt: skip
+            commit_message += f"\n\n{commit_description}"  # fmt: skip
 
         if issue_epic_number:
-            commit_message += f"\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
+            commit_message += f"\n\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
 
         if issue_subtasks:
             issue_subtasks = [task.strip() for task in issue_subtasks.split(',')]
             issue_subtasks = list(OrderedDict.fromkeys(issue_subtasks))
             subtasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_subtasks]  # fmt: skip
-            commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
+
+            if issue_epic_number:
+                commit_message += f"\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
+            else:
+                commit_message += f"\n\nissue subtasks: [{', '.join(subtasks_list)}]"  # fmt: skip
 
         if issue_related_tasks:
             issue_related_tasks = [
@@ -176,10 +180,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             ]
             issue_related_tasks = list(OrderedDict.fromkeys(issue_related_tasks))
             related_tasks_list = [f"{jira_project_key}{task.strip()}" for task in issue_related_tasks]  # fmt: skip
-            commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]\n"  # fmt: skip
+
+            if issue_epic_number or issue_subtasks:
+                commit_message += f"\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
+            else:
+                commit_message += f"\n\nissue related tasks: [{', '.join(related_tasks_list)}]"  # fmt: skip
 
         if footer:
-            commit_message += f"\n{footer}"  # fmt: skip
+            commit_message += f"\n\n{footer}"  # fmt: skip
 
         return commit_message.rstrip()
 
