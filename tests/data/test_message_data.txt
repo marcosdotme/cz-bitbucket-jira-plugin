@@ -1457,7 +1457,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -1479,7 +1479,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -1501,7 +1501,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -1523,7 +1523,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2425,7 +2425,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2447,7 +2447,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2469,7 +2469,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2491,7 +2491,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2513,7 +2513,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2535,7 +2535,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2557,7 +2557,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -2579,7 +2579,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5351,7 +5351,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5375,7 +5375,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5399,7 +5399,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5423,7 +5423,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5447,7 +5447,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5471,7 +5471,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5495,7 +5495,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5519,7 +5519,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5543,7 +5543,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5567,7 +5567,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5591,7 +5591,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5615,7 +5615,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5639,7 +5639,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5663,7 +5663,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5687,7 +5687,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5711,7 +5711,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5735,7 +5735,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5759,7 +5759,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5783,7 +5783,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -5807,7 +5807,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -6983,7 +6983,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7007,7 +7007,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7031,7 +7031,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7055,7 +7055,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7559,7 +7559,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7583,7 +7583,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7607,7 +7607,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7631,7 +7631,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7655,7 +7655,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7679,7 +7679,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7703,7 +7703,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7727,7 +7727,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7751,7 +7751,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7775,7 +7775,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7799,7 +7799,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -7823,7 +7823,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9431,7 +9431,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9455,7 +9455,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9479,7 +9479,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9503,7 +9503,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9719,7 +9719,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9743,7 +9743,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9767,7 +9767,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -9791,7 +9791,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10295,7 +10295,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10319,7 +10319,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10343,7 +10343,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10367,7 +10367,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10391,7 +10391,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10415,7 +10415,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10439,7 +10439,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10463,7 +10463,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10487,7 +10487,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10511,7 +10511,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10535,7 +10535,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10559,7 +10559,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10583,7 +10583,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10607,7 +10607,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10631,7 +10631,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10655,7 +10655,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10679,7 +10679,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10703,7 +10703,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10727,7 +10727,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10751,7 +10751,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10775,7 +10775,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10799,7 +10799,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10823,7 +10823,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -10847,7 +10847,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -14857,7 +14857,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -14883,7 +14883,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -14909,7 +14909,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -14935,7 +14935,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15169,7 +15169,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15195,7 +15195,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15221,7 +15221,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15247,7 +15247,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15481,7 +15481,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15507,7 +15507,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15533,7 +15533,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15559,7 +15559,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15793,7 +15793,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15819,7 +15819,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15845,7 +15845,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -15871,7 +15871,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16105,7 +16105,7 @@
             "commit_title": "fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16131,7 +16131,7 @@
             "commit_title": "fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16157,7 +16157,7 @@
             "commit_title": "Fix me",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16183,7 +16183,7 @@
             "commit_title": "Fix me.",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16729,7 +16729,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16755,7 +16755,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16781,7 +16781,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16807,7 +16807,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16833,7 +16833,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16859,7 +16859,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16885,7 +16885,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16911,7 +16911,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16937,7 +16937,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16963,7 +16963,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -16989,7 +16989,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17015,7 +17015,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17041,7 +17041,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17067,7 +17067,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17093,7 +17093,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17119,7 +17119,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17145,7 +17145,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17171,7 +17171,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17197,7 +17197,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17223,7 +17223,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17249,7 +17249,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17275,7 +17275,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17301,7 +17301,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17327,7 +17327,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17353,7 +17353,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17379,7 +17379,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17405,7 +17405,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17431,7 +17431,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17457,7 +17457,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17483,7 +17483,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17509,7 +17509,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17535,7 +17535,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17561,7 +17561,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17587,7 +17587,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17613,7 +17613,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17639,7 +17639,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17665,7 +17665,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17691,7 +17691,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17717,7 +17717,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17743,7 +17743,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17769,7 +17769,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17795,7 +17795,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17821,7 +17821,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17847,7 +17847,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17873,7 +17873,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17899,7 +17899,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17925,7 +17925,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17951,7 +17951,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -17977,7 +17977,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18003,7 +18003,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18029,7 +18029,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18055,7 +18055,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18081,7 +18081,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18107,7 +18107,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18133,7 +18133,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18159,7 +18159,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18185,7 +18185,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18211,7 +18211,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18237,7 +18237,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -18263,7 +18263,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19225,7 +19225,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19251,7 +19251,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19277,7 +19277,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19303,7 +19303,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19329,7 +19329,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19355,7 +19355,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19381,7 +19381,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19407,7 +19407,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19433,7 +19433,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19459,7 +19459,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19485,7 +19485,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -19511,7 +19511,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21097,7 +21097,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21123,7 +21123,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21149,7 +21149,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21175,7 +21175,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21201,7 +21201,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21227,7 +21227,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21253,7 +21253,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21279,7 +21279,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21305,7 +21305,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21331,7 +21331,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21357,7 +21357,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -21383,7 +21383,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22033,7 +22033,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22059,7 +22059,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22085,7 +22085,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22111,7 +22111,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22137,7 +22137,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22163,7 +22163,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22189,7 +22189,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22215,7 +22215,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22241,7 +22241,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22267,7 +22267,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22293,7 +22293,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -22319,7 +22319,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -23979,7 +23979,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24007,7 +24007,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24035,7 +24035,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24063,7 +24063,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24091,7 +24091,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24119,7 +24119,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24147,7 +24147,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24175,7 +24175,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24203,7 +24203,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24231,7 +24231,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24259,7 +24259,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24287,7 +24287,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -24987,7 +24987,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25015,7 +25015,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25043,7 +25043,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25071,7 +25071,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25099,7 +25099,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25127,7 +25127,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25155,7 +25155,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25183,7 +25183,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25211,7 +25211,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25239,7 +25239,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25267,7 +25267,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25295,7 +25295,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -25995,7 +25995,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26023,7 +26023,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26051,7 +26051,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26079,7 +26079,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26107,7 +26107,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26135,7 +26135,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26163,7 +26163,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26191,7 +26191,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26219,7 +26219,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26247,7 +26247,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26275,7 +26275,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -26303,7 +26303,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27003,7 +27003,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27031,7 +27031,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27059,7 +27059,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27087,7 +27087,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27115,7 +27115,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27143,7 +27143,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27171,7 +27171,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27199,7 +27199,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27227,7 +27227,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27255,7 +27255,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27283,7 +27283,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -27311,7 +27311,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28011,7 +28011,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28039,7 +28039,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28067,7 +28067,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28095,7 +28095,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28123,7 +28123,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28151,7 +28151,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28179,7 +28179,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28207,7 +28207,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28235,7 +28235,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28263,7 +28263,7 @@
             "commit_description": "",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28291,7 +28291,7 @@
             "commit_description": "Long description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
@@ -28319,7 +28319,7 @@
             "commit_description": "Long...\nLong description...",
             "footer": "CZ-1050 #done"
         },
-        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\nCZ-1050 #done"
+        "expected_output": "fix: fix me [CZ-1050]\n\nLong...\nLong description...\n\nissue epic: [CZ-1000]\nissue subtasks: [CZ-1051, CZ-1052]\n\nCZ-1050 #done"
     },
     {
         "params": {
