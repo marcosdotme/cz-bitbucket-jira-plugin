@@ -1,3 +1,6 @@
+from commitizen import defaults
+
+
 DEFAULT_COMMIT_TYPES = [
     {'value': 'init', 'name': 'init: initial commit to set up your repository'},
     {'value': 'feat', 'name': 'feat: introduce a new feature'},
@@ -32,3 +35,32 @@ DEFAULT_PROMPT_STYLE = {
         ('disabled', 'fg:#858585 italic'),
     ]
 }
+
+CHANGELOG_PATTERN = defaults.bump_pattern
+
+CHANGE_TYPE_MAP = {
+    'feat': 'New features',
+    'fix': 'Bug fixes',
+    'perf': 'Performance improvements',
+    'refactor': 'Code refactoring',
+    'delete': 'Code or file deletions',
+    'docs': 'Documentation updates',
+    'typo': 'Typographical corrections',
+    'test': 'Test additions or updates',
+    'style': 'Code style and formatting',
+    'misc': 'Miscellaneous',
+}
+
+CHANGE_TYPE_ORDER = [
+    'BREAKING CHANGE',
+    'New features',
+    'Bug fixes',
+    'Performance improvements',
+    'Code refactoring',
+    'Code or file deletions',
+    'Documentation updates',
+    'Typographical corrections',
+    'Test additions or updates',
+    'Code style and formatting',
+    'Miscellaneous',
+]

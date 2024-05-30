@@ -86,7 +86,6 @@ Example:
 ```toml
 [tool.commitizen]
 name = "cz-bitbucket-jira-plugin"
-jira_project_key = "DEV"
 prompt_style = [
     { identifier = "question", style = "fg:#50FA7B bold" },
     { identifier = "answer", style = "fg:#F8F8F2 nobold" }
@@ -136,10 +135,45 @@ Example:
 ```toml
 [tool.commitizen]
 name = "cz-bitbucket-jira-plugin"
-jira_project_key = "DEV"
 commit_types = [
     { value = "feat", name = "feat: introduce a new feature" },
     { value = "fix", name = "fix: fix a bug" },
     { value = "refactor", name = "refactor: code refactoring" }
+]
+```
+
+> [!IMPORTANT]
+> If you change the defult commit types you will also need to declare two other keys: `change_type_map` and `change_type_order`.
+
+#### Change type map
+
+[*Array of inline tables*](https://toml.io/en/v1.0.0#inline-table) that have an key map for each commit type. Using the commit types on the example above:
+
+```toml
+[tool.commitizen]
+name = "cz-bitbucket-jira-plugin"
+change_type_map = [
+    { value = "feat", name = "New features" },
+    { value = "fix", name = "Bug fixes" },
+    { value = "refactor", name = "Code refactoring" }
+]
+```
+
+The `value` are the commit type and `name` are the long name that will appear on Changelog.
+
+
+#### Change type order
+
+[*Array*](https://toml.io/en/v1.0.0#array) containing the order you want to show on Changelog.
+
+If you think that bug fixes are more important than new features you can show them first on Changelog:
+
+```toml
+[tool.commitizen]
+name = "cz-bitbucket-jira-plugin"
+change_type_order = [
+    "Bug fixes",
+    "New features",
+    "Code refactoring"
 ]
 ```
