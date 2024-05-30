@@ -4,8 +4,11 @@ from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
 
-from .constants import DEFAULT_COMMIT_TYPES
-from .constants import DEFAULT_PROMPT_STYLE
+from .defaults import CHANGE_TYPE_MAP
+from .defaults import CHANGE_TYPE_ORDER
+from .defaults import CHANGELOG_PATTERN
+from .defaults import DEFAULT_COMMIT_TYPES
+from .defaults import DEFAULT_PROMPT_STYLE
 from .functions import get_user_prompt_style
 from .validators import AllValuesMustBeIntegerValidator
 from .validators import apply_multiple_validators
@@ -15,6 +18,10 @@ from .validators import ValueMustBeIntegerValidator
 
 
 class CzBitbucketJiraPlugin(BaseCommitizen):
+    changelog_pattern = CHANGELOG_PATTERN
+    change_type_map = CHANGE_TYPE_MAP
+    change_type_order = CHANGE_TYPE_ORDER
+
     def __init__(self, config: BaseConfig):
         self.config = config
 
@@ -26,9 +33,19 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         )
 
         self.commit_types = self.user_commit_types or DEFAULT_COMMIT_TYPES
-        self.config.update(self.user_prompt_style or DEFAULT_PROMPT_STYLE)
+        piped_commit_types = '|'.join(
+            [d.get('value') for d in self.commit_types] + ['BREAKING CHANGE']
+        )
+        # fmt: off
+        self.commit_parser = (
+            fr"^((?P<change_type>{piped_commit_types})"
+            r'(?:\((?P<scope>[^()\r\n]*)\)|\()?(?P<breaking>!)?|\w+!):\s(?P<message>.*)?'
+        )
+        # fmt: on
 
         self.minimum_length = self.user_minimum_length or 32
+
+        self.config.update(self.user_prompt_style or DEFAULT_PROMPT_STYLE)
 
         super().__init__(self.config)
 
