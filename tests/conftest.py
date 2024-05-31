@@ -4,10 +4,15 @@ import pytest
 from commitizen.config import BaseConfig
 from commitizen.config import TomlConfig
 
+from cz_bitbucket_jira_plugin.defaults import JIRA_URL_EXAMPLE
+
 
 @pytest.fixture()
 def default_config():
-    return BaseConfig()
+    config = BaseConfig()
+    config.update({'jira_url': JIRA_URL_EXAMPLE})
+
+    return config
 
 
 @pytest.fixture

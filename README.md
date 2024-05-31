@@ -1,6 +1,6 @@
 # cz-bitbucket-jira-plugin
 
-> An [Commitizen](https://github.com/commitizen-tools/commitizen)  plugin that links your Bitbucket commits with your Jira issues.
+> A [Commitizen](https://github.com/commitizen-tools/commitizen) plugin that links your Bitbucket commits with your Jira issues.
 
 ![GIF](https://vhs.charm.sh/vhs-duzp35l3XRQoHAoMLX6wA.gif)
 
@@ -11,21 +11,22 @@ pip install cz-bitbucket-jira-plugin
 
 ## Configuration
 
-Theres 2 possible configuration files: `pyproject.toml` and `cz.toml`. Up to you.
+Theres 2 possible configuration files: `pyproject.toml` and `cz.toml`. It's up to you.
 
 > [!TIP]
-> If you already has an `pyproject.toml` in your project, use him. If not, create an `cz.toml`.
+> If you already have a `pyproject.toml` in your project, use it. If not, create a `cz.toml`.
 
-The only required configuration is:
+The only **required** configurations are:
 
 ```toml
 [tool.commitizen]
 name = "cz-bitbucket-jira-plugin"
+jira_url = "https://<project name>.atlassian.net"
 ```
 
-This tell to commitizen which plugin you want to use.
+This tells Commitizen which plugin you want to use and what is your Jira url, to properly link issues on commit messages and Changelog.
 
-But...
+### Jira project key (_optional_)
 
 To avoid the need to type your **Jira project key** for every commit, you can set this up in your chosen configuration file:
 
@@ -35,11 +36,11 @@ name = "cz-bitbucket-jira-plugin"
 jira_project_key = "DEV"
 ```
 
-Now every time you execute `cz commit`, commitizen will use the **cz-bitbucket-jira-plugin** and use "DEV" as your default **Jira project key**.
+Now every time you execute `cz commit`, Commitizen will use the **cz-bitbucket-jira-plugin** and use "DEV" as your default **Jira project key**.
 
-### Minimum length for commit messages
+### Minimum length for commit messages (_optional_)
 
-You can set an minimum length for commit messages to prevent things like `"fix"`, `"wip"`, `"test"`, `"aaa"`, and so on...
+You can set a minimum length for commit messages to prevent things like `"fix"`, `"wip"`, `"test"`, `"aaa"`, and so on...
 
 To do this, set this up in your chosen configuration file:
 
@@ -52,7 +53,7 @@ commit_message_minimum_length = 32
 The default value for this config is `32`.
 
 ## Usage
-As long it's an [Commitizen](https://github.com/commitizen-tools/commitizen) plugin, you can:
+As it is a [Commitizen](https://github.com/commitizen-tools/commitizen) plugin, you can:
 
 ```shell
 cz
@@ -62,7 +63,7 @@ cz
 You can change some defaults of the plugin:
 
 ### Prompt style
-To change the default **prompt style** that are:
+To change the default **prompt style** which is:
 
 ```toml
 prompt_style = [
@@ -79,7 +80,7 @@ prompt_style = [
 ]
 ```
 
-You can create the `prompt_style` key on your config file. This key must be an [*array of inline tables*](https://toml.io/en/v1.0.0#inline-table). Each inline table must have two pair of key/value.
+You can create the `prompt_style` key in your config file. This key must be an [*array of inline tables*](https://toml.io/en/v1.0.0#inline-table). Each inline table must have two pair of key/value.
 
 Example:
 
@@ -100,7 +101,7 @@ The available identifiers are:
 - pointer
 - highlighted
 - selected
-- separador
+- separator
 - instruction
 - text
 - disabled
@@ -110,7 +111,7 @@ The available identifiers are:
 For the complete styling documentation check https://python-prompt-toolkit.readthedocs.io/en/stable/pages/advanced_topics/styling.html
 
 ### Commit types
-To change the default **commit types** that are:
+To change the default **commit types** which is:
 
 ```toml
 commit_types = [
@@ -128,7 +129,7 @@ commit_types = [
 ]
 ```
 
-You can create the `commit_types` key on your config file.This key must be an [*array of inline tables*](https://toml.io/en/v1.0.0#inline-table). Each inline table must have two pair of key/value, and the key names must be: **value** and **name**. Must be these names (at least for now).
+You can create the `commit_types` key in your config file. This key must be an [*array of inline tables*](https://toml.io/en/v1.0.0#inline-table). Each inline table must have two pair of key/value, and the key names must be: **value** and **name**. Must be these names (at least for now).
 
 Example:
 
@@ -143,7 +144,7 @@ commit_types = [
 ```
 
 > [!IMPORTANT]
-> If you change the defult commit types you will also need to declare two other keys: `change_type_map` and `change_type_order`.
+> If you change the default commit types you will also need to declare two other keys: `change_type_map` and `change_type_order`.
 
 #### Change type map
 
@@ -159,12 +160,12 @@ change_type_map = [
 ]
 ```
 
-The `value` are the commit type and `name` are the long name that will appear on Changelog.
+The `value` are the commit type and `name` are the long name that will appear in the Changelog.
 
 
 #### Change type order
 
-[*Array*](https://toml.io/en/v1.0.0#array) containing the order you want to show on Changelog.
+[*Array*](https://toml.io/en/v1.0.0#array) containing the order you want to show in the Changelog.
 
 If you think that bug fixes are more important than new features you can show them first on Changelog:
 

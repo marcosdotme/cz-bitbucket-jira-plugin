@@ -1,5 +1,10 @@
+import re
+
 from commitizen import defaults
 
+
+JIRA_URL_EXAMPLE = 'https://<project name>.atlassian.net'
+JIRA_URL_PATTERN = re.compile(r'(http|https)://.*?\.net')
 
 DEFAULT_COMMIT_TYPES = [
     {'value': 'init', 'name': 'init: initial commit to set up your repository'},
