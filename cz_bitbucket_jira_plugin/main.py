@@ -141,7 +141,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             {
                 'type': 'select',
                 'name': 'commit_type',
-                'message': 'Select the commit type:\n ',
+                'message': 'Select the type of change you are committing:\n ',
                 'choices': self.commit_types,
                 'pointer': '>',
                 'instruction': select_instruction,
