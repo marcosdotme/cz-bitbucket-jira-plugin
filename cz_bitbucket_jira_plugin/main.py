@@ -1,5 +1,7 @@
+import re
 from collections import OrderedDict
 
+from commitizen import git
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
@@ -11,6 +13,10 @@ from .defaults import CHANGE_TYPE_ORDER
 from .defaults import CHANGELOG_PATTERN
 from .defaults import DEFAULT_COMMIT_TYPES
 from .defaults import DEFAULT_PROMPT_STYLE
+from .defaults import JIRA_URL_EXAMPLE
+from .defaults import JIRA_URL_PATTERN
+from .exceptions import IncorrectConfigException
+from .exceptions import RequiredConfigException
 from .functions import get_user_prompt_style
 from .validators import AllValuesMustBeIntegerValidator
 from .validators import apply_multiple_validators
@@ -22,6 +28,22 @@ from .validators import ValueMustBeIntegerValidator
 class CzBitbucketJiraPlugin(BaseCommitizen):
     def __init__(self, config: BaseConfig):
         self.config = config
+
+        self.user_jira_url = self.config.settings.get('jira_url')
+
+        if not self.user_jira_url:
+            raise RequiredConfigException(config_name='jira_url')
+
+        try:
+            self.jira_base_url = re.search(
+                pattern=JIRA_URL_PATTERN, string=self.user_jira_url
+            ).group()
+        except AttributeError:
+            # fmt: off
+            raise IncorrectConfigException(
+                f"Config `jira_url` seems wrong. It must be like: '{JIRA_URL_EXAMPLE}'"
+            )
+            # fmt: on
 
         self.user_jira_project_key = self.config.settings.get('jira_project_key')
         self.user_commit_types = self.config.settings.get('commit_types')
@@ -255,3 +277,21 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         Used by `cz info`.
         """
         return 'We use this because is useful'
+
+    def changelog_message_builder_hook(self, parsed_message: dict, commit: git.GitCommit):
+        issue_id_pattern = re.compile(r'\[([^\[\]]*)\](?!.*\[)')
+
+        commit_hash = commit.rev[:7]
+        message = parsed_message.get('message')
+        message_without_issue_id = issue_id_pattern.sub('', message).strip()
+
+        issue_id = issue_id_pattern.search(message).group(1)
+
+        # fmt: off
+        parsed_message['message'] = (
+            f"{commit_hash}: {message_without_issue_id} "
+            f"[{issue_id}]({self.jira_base_url}/browse/{issue_id})"
+        )
+        # fmt: on
+
+        return parsed_message
