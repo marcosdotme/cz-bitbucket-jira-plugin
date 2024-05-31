@@ -36,6 +36,25 @@ DEFAULT_PROMPT_STYLE = {
     ]
 }
 
+MAJOR = 'MAJOR'
+MINOR = 'MINOR'
+PATCH = 'PATCH'
+
+BUMP_MAP = {
+    'feat': MINOR,
+    'fix': PATCH,
+    'perf': PATCH,
+    'refactor': PATCH,
+    'delete': MAJOR,
+    'docs': PATCH,
+    'typo': PATCH,
+    'test': PATCH,
+    'style': PATCH,
+    'misc': PATCH,
+}
+
+BUMP_PATTERN = defaults.bump_pattern
+
 CHANGELOG_PATTERN = defaults.bump_pattern
 
 CHANGE_TYPE_MAP = {

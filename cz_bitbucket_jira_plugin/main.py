@@ -4,6 +4,8 @@ from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
 
+from .defaults import BUMP_MAP
+from .defaults import BUMP_PATTERN
 from .defaults import CHANGE_TYPE_MAP
 from .defaults import CHANGE_TYPE_ORDER
 from .defaults import CHANGELOG_PATTERN
@@ -29,6 +31,9 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         )
         self.user_change_type_map = self.config.settings.get('change_type_map')
         self.user_change_type_order = self.config.settings.get('change_type_order')
+
+        self.bump_pattern = BUMP_PATTERN
+        self.bump_map = BUMP_MAP
 
         self.changelog_pattern = CHANGELOG_PATTERN
         self.change_type_map = self.user_change_type_map or CHANGE_TYPE_MAP
