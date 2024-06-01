@@ -92,6 +92,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         )
         select_instruction = '(use arrow keys to select and press [enter])\n'
         optional_instruction = '(press [enter] to skip)\n '
+        confirm_instruction = '(y/n)\n  '
 
         questions = [
             {
@@ -172,6 +173,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
                 'qmark': '\n ',
             },
             {
+                'type': 'confirm',
+                'name': 'is_breaking_change',
+                'message': 'Is this a BREAKING CHANGE? Correlates with MAJOR in SemVer?',
+                'default': False,
+                'instruction': confirm_instruction,
+                'auto_enter': False,
+                'qmark': '\n*',
+            },
+            {
                 'type': 'input',
                 'multiline': True,
                 'instruction': f'\n  {multiline_instruction}',
@@ -193,11 +203,12 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         if jira_project_key:
             jira_project_key += '-'
 
-        issue_number = answers.get('issue_number')
         issue_epic_number = answers.get('issue_epic_number')
+        issue_number = answers.get('issue_number')
         issue_subtasks = answers.get('issue_subtasks')
         issue_related_tasks = answers.get('issue_related_tasks')
 
+        commit_type = answers.get('commit_type')
         commit_scope = answers.get('commit_scope', '').strip()
 
         commit_title = answers.get('commit_title')
@@ -205,22 +216,32 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         commit_title = commit_title.strip().rstrip('.')
 
         commit_description = answers.get('commit_description')
-        commit_type = answers.get('commit_type')
+        is_breaking_change = answers.get('is_breaking_change')
         footer = answers.get('footer')
+
+        breaking_change_sign = '!' if is_breaking_change else ''
+        breaking_change_text = 'BREAKING CHANGE' if is_breaking_change else ''
 
         # fmt: off
         if commit_scope:
             commit_message = (
-                f"{commit_type}({commit_scope}): {commit_title} [{jira_project_key}{issue_number}]"
+                f"{commit_type}({commit_scope}){breaking_change_sign}: "
+                f"{commit_title} [{jira_project_key}{issue_number}]"
             )
         else:
             commit_message = (
-                f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]"
+                f"{commit_type}{breaking_change_sign}: "
+                f"{commit_title} [{jira_project_key}{issue_number}]"
             )
         # fmt: on
 
         if commit_description:
-            commit_message += f"\n\n{commit_description}"  # fmt: skip
+            if is_breaking_change:
+                commit_message += f"\n\n{breaking_change_text}: {commit_description}"  # fmt: skip
+            else:
+                commit_message += f"\n\n{commit_description}"  # fmt: skip
+        else:
+            commit_message += f"\n\n{breaking_change_text}"  # fmt: skip
 
         if issue_epic_number:
             commit_message += f"\n\nissue epic: [{jira_project_key}{issue_epic_number}]"  # fmt: skip
@@ -294,6 +315,12 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         return 'We use this because is useful'
 
     def changelog_message_builder_hook(self, parsed_message: dict, commit: git.GitCommit):
+        if parsed_message.get('change_type') == 'BREAKING CHANGE':
+            return False
+
+        if parsed_message.get('breaking'):
+            parsed_message['change_type'] = 'BREAKING CHANGE'
+
         issue_id_pattern = re.compile(r'\[([^\[\]]*)\](?!.*\[)')
 
         commit_hash = commit.rev[:7]
@@ -304,8 +331,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
 
         # fmt: off
         parsed_message['message'] = (
-            f"{commit_hash}: {message_without_issue_id} "
-            f"[{issue_id}]({self.jira_base_url}/browse/{issue_id})"
+            f"{message_without_issue_id} "
+            f"[{issue_id}]({self.jira_base_url}/browse/{issue_id}) ({commit_hash})"
         )
         # fmt: on
 
