@@ -46,6 +46,8 @@ MINOR = 'MINOR'
 PATCH = 'PATCH'
 
 BUMP_MAP = {
+    r'^.+!$': MAJOR,  # detects BREAKING CHANGE also
+    'BREAKING CHANGE': MAJOR,
     'feat': MINOR,
     'fix': PATCH,
     'perf': PATCH,
