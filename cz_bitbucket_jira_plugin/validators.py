@@ -14,6 +14,22 @@ from .exceptions import RequiredAnswerException
 from .exceptions import ValueMustBeIntegerException
 
 
+def apply_multiple_validators(validators: List[Callable]):
+    def apply_validators(answer):
+        for validator in validators:
+            if inspect.isclass(validator):
+                result = validator.validate(answer)
+            else:
+                result = validator(answer)
+
+            if result != True:  # noqa: E712
+                return result
+
+        return True
+
+    return apply_validators
+
+
 class RequiredAnswerValidator(Validator):
     @classmethod
     def validate(cls, answer):
@@ -60,22 +76,6 @@ class AllValuesMustBeIntegerValidator(Validator):
             raise AllValuesMustBeIntegerException
 
         return True
-
-
-def apply_multiple_validators(validators: List[Callable]):
-    def apply_validators(answer):
-        for validator in validators:
-            if inspect.isclass(validator):
-                result = validator.validate(answer)
-            else:
-                result = validator(answer)
-
-            if result != True:  # noqa: E712
-                return result
-
-        return True
-
-    return apply_validators
 
 
 class MinimumLengthValidator(Validator):
