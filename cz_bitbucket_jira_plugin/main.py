@@ -91,6 +91,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             '(press [enter] to insert a new line OR [alt + enter] to finish)\n>'
         )
         select_instruction = '(use arrow keys to select and press [enter])\n'
+        optional_instruction = '(press [enter] to skip)\n '
 
         questions = [
             {
@@ -150,6 +151,13 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             },
             {
                 'type': 'input',
+                'name': 'commit_scope',
+                'message': "What's the scope of this change?",
+                'instruction': optional_instruction,
+                'qmark': '\n ',
+            },
+            {
+                'type': 'input',
                 'name': 'commit_title',
                 'message': 'Commit title:\n ',
                 'validate': MinimumLengthValidator(minimum_length=self.minimum_length),
@@ -190,6 +198,8 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         issue_subtasks = answers.get('issue_subtasks')
         issue_related_tasks = answers.get('issue_related_tasks')
 
+        commit_scope = answers.get('commit_scope', '').strip()
+
         commit_title = answers.get('commit_title')
         commit_title = commit_title[:1].lower() + commit_title[1:]
         commit_title = commit_title.strip().rstrip('.')
@@ -199,9 +209,14 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         footer = answers.get('footer')
 
         # fmt: off
-        commit_message = (
-            f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]"
-        )
+        if commit_scope:
+            commit_message = (
+                f"{commit_type}({commit_scope}): {commit_title} [{jira_project_key}{issue_number}]"
+            )
+        else:
+            commit_message = (
+                f"{commit_type}: {commit_title} [{jira_project_key}{issue_number}]"
+            )
         # fmt: on
 
         if commit_description:
