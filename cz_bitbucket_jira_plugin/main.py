@@ -5,6 +5,7 @@ from commitizen import git
 from commitizen.config.base_config import BaseConfig
 from commitizen.cz.base import BaseCommitizen
 from commitizen.defaults import Questions
+from commitizen.exceptions import InvalidConfigurationError
 
 from .defaults import BUMP_MAP
 from .defaults import BUMP_PATTERN
@@ -15,7 +16,6 @@ from .defaults import DEFAULT_COMMIT_TYPES
 from .defaults import DEFAULT_PROMPT_STYLE
 from .defaults import JIRA_URL_EXAMPLE
 from .defaults import JIRA_URL_PATTERN
-from .exceptions import IncorrectConfigException
 from .exceptions import RequiredConfigException
 from .functions import get_user_prompt_style
 from .validators import AllValuesMustBeIntegerValidator
@@ -40,7 +40,7 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
             ).group()
         except AttributeError:
             # fmt: off
-            raise IncorrectConfigException(
+            raise InvalidConfigurationError(
                 f"Config `jira_url` seems wrong. It must be like: '{JIRA_URL_EXAMPLE}'"
             )
             # fmt: on

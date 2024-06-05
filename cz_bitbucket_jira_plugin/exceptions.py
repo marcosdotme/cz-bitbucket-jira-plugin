@@ -9,13 +9,6 @@ class RequiredConfigException(CzException):
     # fmt: on
 
 
-class IncorrectConfigException(CzException):
-    # fmt: off
-    def __init__(self, message: str):
-        super().__init__(message)
-    # fmt: on
-
-
 class RequiredAnswerException(ValidationError):
     def __init__(self):
         super().__init__(cursor_position=0, message='Answer is required.')
