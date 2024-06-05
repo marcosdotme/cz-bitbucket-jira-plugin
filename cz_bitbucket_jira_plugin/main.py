@@ -9,9 +9,9 @@ from commitizen.exceptions import InvalidConfigurationError
 
 from .defaults import BUMP_MAP
 from .defaults import BUMP_PATTERN
-from .defaults import CHANGE_TYPE_MAP
-from .defaults import CHANGE_TYPE_ORDER
 from .defaults import CHANGELOG_PATTERN
+from .defaults import CHANGELOG_TYPE_MAP
+from .defaults import CHANGELOG_TYPE_ORDER
 from .defaults import DEFAULT_COMMIT_TYPES
 from .defaults import DEFAULT_PROMPT_STYLE
 from .defaults import JIRA_URL_EXAMPLE
@@ -51,15 +51,15 @@ class CzBitbucketJiraPlugin(BaseCommitizen):
         self.user_minimum_length = self.config.settings.get(
             'commit_message_minimum_length'
         )
-        self.user_change_type_map = self.config.settings.get('change_type_map')
-        self.user_change_type_order = self.config.settings.get('change_type_order')
+        self.user_changelog_type_map = self.config.settings.get('changelog_type_map')
+        self.user_changelog_type_order = self.config.settings.get('changelog_type_order')
 
         self.bump_pattern = BUMP_PATTERN
         self.bump_map = BUMP_MAP
 
         self.changelog_pattern = CHANGELOG_PATTERN
-        self.change_type_map = self.user_change_type_map or CHANGE_TYPE_MAP
-        self.change_type_order = self.user_change_type_order or CHANGE_TYPE_ORDER
+        self.change_type_map = self.user_changelog_type_map or CHANGELOG_TYPE_MAP
+        self.change_type_order = self.user_changelog_type_order or CHANGELOG_TYPE_ORDER
 
         self.commit_types = self.user_commit_types or DEFAULT_COMMIT_TYPES
         piped_commit_types = '|'.join(

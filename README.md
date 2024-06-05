@@ -144,16 +144,16 @@ commit_types = [
 ```
 
 > [!IMPORTANT]
-> If you change the default commit types you will also need to declare two other keys: `change_type_map` and `change_type_order`.
+> If you change the default commit types you will also need to declare two other keys: `changelog_type_map` and `changelog_type_order`.
 
-#### Change type map
+#### Changelog type map
 
 [*Array of inline tables*](https://toml.io/en/v1.0.0#inline-table) that have an key map for each commit type. Using the commit types on the example above:
 
 ```toml
 [tool.commitizen]
 name = "cz-bitbucket-jira-plugin"
-change_type_map = [
+changelog_type_map = [
     { value = "feat", name = "New features" },
     { value = "fix", name = "Bug fixes" },
     { value = "refactor", name = "Code refactoring" }
@@ -163,7 +163,7 @@ change_type_map = [
 The `value` are the commit type and `name` are the long name that will appear in the Changelog.
 
 
-#### Change type order
+#### Changelog type order
 
 [*Array*](https://toml.io/en/v1.0.0#array) containing the order you want to show in the Changelog.
 
@@ -172,7 +172,7 @@ If you think that bug fixes are more important than new features you can show th
 ```toml
 [tool.commitizen]
 name = "cz-bitbucket-jira-plugin"
-change_type_order = [
+changelog_type_order = [
     "Bug fixes",
     "New features",
     "Code refactoring"

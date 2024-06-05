@@ -64,7 +64,7 @@ BUMP_PATTERN = defaults.bump_pattern
 
 CHANGELOG_PATTERN = defaults.bump_pattern
 
-CHANGE_TYPE_MAP = {
+CHANGELOG_TYPE_MAP = {
     'feat': 'New features',
     'fix': 'Bug fixes',
     'perf': 'Performance improvements',
@@ -77,7 +77,7 @@ CHANGE_TYPE_MAP = {
     'misc': 'Miscellaneous',
 }
 
-CHANGE_TYPE_ORDER = [
+CHANGELOG_TYPE_ORDER = [
     'BREAKING CHANGE',
     'New features',
     'Bug fixes',
